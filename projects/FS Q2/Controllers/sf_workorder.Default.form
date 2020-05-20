@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>sf_workorder</EntityName>
+  <CamelCase>sf_workorder</CamelCase>
+  <ClassBinding />
+  <SerializedChildren />
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexi="0" flexiHeader="1" flexiMaxLines="0">
+      <Name>sf_workorder</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="workordernumber" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="subject" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="accountid" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" image="false" separator="true">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="startdate" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="enddate" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" image="false" separator="true">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="description" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" image="false" separator="true">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="ownerid2" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexi="0" flexiHeight="200px" flexiHeader="1" flexiMaxLines="0">
+      <Name>Details</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="status" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="contactid" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+          <LookupViews>&lt;lookup&gt;&lt;extra /&gt;&lt;extra&gt;&lt;filter entity="sf_contact"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_contact"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="accountid" operator="eq" value="{{accountid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;&lt;/lookup&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="caseid" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+          <LookupViews>&lt;lookup&gt;&lt;extra /&gt;&lt;extra&gt;&lt;filter entity="sf_case"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_case"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="accountid" operator="eq" value="{{accountid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;&lt;/lookup&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="assetid" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+          <LookupViews>&lt;lookup&gt;&lt;extra /&gt;&lt;extra&gt;&lt;filter entity="sf_asset"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_asset"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="accountid" operator="eq" value="{{accountid}}" /&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;&lt;/lookup&gt;</LookupViews>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="200px" flexiHeader="1" flexiMaxLines="0" FlipMode="224">
+      <Name>Work Order Line Items List</Name>
+      <LogicalName>sf_workorderlineitem.workorderid</LogicalName>
+      <Views>sf_workorderlineitem.All Line Items</Views>
+      <LookupViews>sf_workorderlineitem.All Line Items</LookupViews>
+      <Binding SchemaName="sf_workorderlineitem.workorderid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="200px" flexiHeader="1" flexiMaxLines="0" FlipMode="0">
+      <Name>Skill Requirements List</Name>
+      <LogicalName>sf_skillrequirement.relatedrecordid</LogicalName>
+      <Binding SchemaName="sf_skillrequirement.relatedrecordid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="200px" flexiHeader="1" flexiMaxLines="0" FlipMode="0">
+      <Name>Products Required List</Name>
+      <LogicalName>sf_productrequired.parentrecordid</LogicalName>
+      <Binding SchemaName="sf_productrequired.parentrecordid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="200px" flexiHeader="1" flexiMaxLines="0" FlipMode="64">
+      <Name>Products Consumed List</Name>
+      <LogicalName>sf_productconsumed.workorderid</LogicalName>
+      <Binding SchemaName="sf_productconsumed.workorderid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="100px" flexiWidth="1" flexiHeader="1" flexiMaxLines="0" FlipMode="0">
+      <Name>Product Requests List</Name>
+      <LogicalName>sf_productrequest.workorderid</LogicalName>
+      <Binding SchemaName="sf_productrequest.workorderid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="200px" flexiWidth="1" flexiHeader="1" flexiMaxLines="0" FlipMode="0">
+      <Name>Service Appointments List</Name>
+      <LogicalName>sf_serviceappointment.parentrecordid</LogicalName>
+      <Views>sf_serviceappointment.*:sf_serviceappointment.@All Appointments</Views>
+      <LookupViews>sf_serviceappointment.*:sf_serviceappointment.@All Appointments</LookupViews>
+      <Binding SchemaName="sf_serviceappointment.parentrecordid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexi="1" flexiHeight="1" flexiWidth="1" flexiHeader="1" flexiMaxLines="0" AllowAddExisting="true" FlipMode="0">
+      <Name>Files</Name>
+      <CustomName>Files</CustomName>
+      <LogicalName>sf_contentdocumentlink.linkedentityid</LogicalName>
+      <Binding SchemaName="sf_contentdocumentlink.linkedentityid">
+        <IsConstant>false</IsConstant>
+      </Binding>
+    </FormTab>
+    <FormTab xsi:type="MapTab" flexi="1" flexiHeight="200px" flexiWidth="1" flexiHeader="1" flexiMaxLines="0">
+      <Name>Map</Name>
+      <CoordinatesBinding>latitude;longitude</CoordinatesBinding>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexi="0" flexiHeader="1" flexiMaxLines="0">
+      <Name>Address</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="street" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="city" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="country" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="postalcode" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem xsi:type="SeparatorDetailItem" image="false" separator="true">
+          <IsConstant>true</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="latitude" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+        <DetailItem SchemaName="longitude" image="false" separator="false">
+          <IsConstant>false</IsConstant>
+        </DetailItem>
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
+  <Navigation flexi="0" flexiHeader="1" flexiMaxLines="0">
+    <Name>Navigation</Name>
+    <SerializedChildren />
+  </Navigation>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables /&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <SharedVariableNames />
+  <PrimaryCommands>Favorite|||Delete||</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedContactInfo />
+</EntityForm>
