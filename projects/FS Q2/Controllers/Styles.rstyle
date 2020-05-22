@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<GlobalStyles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+﻿<GlobalStyles>
   <Styles>
     <Style Name="primary" Type="TextCell">
       <Properties>
@@ -393,7 +392,7 @@
     <Style Name="Secondary" Style="SecondaryRightDate" Type="TextCell">
       <Properties>
         <Property Name="Format" Type="System.String">
-          <Value />
+          <Value></Value>
         </Property>
         <Property Name="HorizontalAlignment" Type="System.Int32">
           <Value>0</Value>
@@ -452,7 +451,7 @@
         </Property>
       </Properties>
     </Style>
-    <Style Name="ImageCellStyle" Style="" Type="ImageCell">
+    <Style Name="ImageCellStyle" Type="ImageCell">
       <Properties>
         <Property Name="ForeColor" Type="System.Int32">
           <Value>-16777216</Value>
@@ -476,7 +475,7 @@
       </Properties>
     </Style>
     <Style Name="Image Cell Style WhiteSelected" Style="Image Cell Style White" Type="ImageCell">
-      <Properties />
+      <Properties/>
     </Style>
     <Style Name="Red Tag" Style="Image Cell Style White" Type="ImageCell">
       <Properties>
@@ -603,7 +602,7 @@
       </Properties>
     </Style>
     <Style Name="photo" Style="ListNoteImage" Type="ImageCell">
-      <Properties />
+      <Properties/>
     </Style>
     <Style Name="GridAttachmentImage" Type="ImageCell">
       <Properties>
@@ -676,7 +675,7 @@
       </Properties>
     </Style>
     <Style Name="CrmDetailCaptionItem" Type="DVItem">
-      <Properties />
+      <Properties/>
     </Style>
     <Style Name="CrmListItem" Type="DVItem">
       <Properties>
@@ -845,7 +844,7 @@
         </Property>
       </Properties>
     </Style>
-        <Style Name="ListFileImage" Style="ListNoteImage" Type="ImageCell">
+    <Style Name="ListFileImage" Style="ListNoteImage" Type="ImageCell">
       <Properties>
         <Property Name="ImageQuery" Type="System.String">
           <Value>sf_contentversion;versiondata;linkedentityid;{id};islatest;1;title;photo.jpg|Controls.noPhoto</Value>
@@ -863,6 +862,34 @@
       <Properties>
         <Property Name="ImageQuery" Type="System.String">
           <Value>sf_contentversion;versiondata;linkedentityid;{product2id};islatest;1;title;photo.jpg|Controls.noPhoto</Value>
+        </Property>
+      </Properties>
+    </Style>
+    <Style Name="Button" Type="DetailItem">
+      <Properties>
+        <Property Name="BackgroundColor" Type="System.Int32">
+          <Value>-1</Value>
+        </Property>
+        <Property Name="RelativeTextFontSize" Type="System.Single">
+          <Value>3</Value>
+        </Property>
+        <Property Name="EditorHorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="EditorFontWeight" Type="System.Int32">
+          <Value>1</Value>
+        </Property>
+        <Property Name="EditorForegroundColor" Type="System.Int32">
+          <Value>-1</Value>
+        </Property>
+        <Property Name="LabelHorizontalAlignment" Type="System.Int32">
+          <Value>2</Value>
+        </Property>
+        <Property Name="EditorDisabledColor" Type="System.Int32">
+          <Value>-1</Value>
+        </Property>
+        <Property Name="LabelPosition" Type="System.Int32">
+          <Value>4</Value>
         </Property>
       </Properties>
     </Style>
