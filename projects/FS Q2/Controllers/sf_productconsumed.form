@@ -13,7 +13,7 @@
     <FormTab xsi:type="DetailTab">
       <Name>sf_productconsumed</Name>
       <SerializedChildren>
-        <DetailItem SchemaName="image" image="true" Style="FormPricebookEntryFileImage">
+        <DetailItem SchemaName="image" image="true" imageActions="0" Style="FormPricebookEntryFileImage">
           <IsConstant>true</IsConstant>
         </DetailItem>
         <DetailItem SchemaName="workorderid">
